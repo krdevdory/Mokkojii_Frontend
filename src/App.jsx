@@ -1,15 +1,22 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route, Link } from 'react-router-dom'
+import SignIn from './pages/Sign/SignIn'
+import SignUp from './pages/Sign/SignUp'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div className='flex h-screen justify-center items-center'>
-        <p className='font-bold text-xl'>TailwindCSS Test</p>
-      </div>
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <div>
+            <Link to="/signup">회원가입 페이지</Link>
+            <Link to="/signin">로그인 페이지</Link>
+          </div>
+        }
+      />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
+    </Routes>
   )
 }
 
