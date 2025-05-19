@@ -56,8 +56,10 @@ export default function SignIn(){
     }
 
     return(
-        <div className='flex flex-col justify-center '>
+        <div className="flex flex-col justify-center">
             <img src="/img/ms-icon-310x310.png" alt="모꼬지 로고" className="w-24 h-24 mx-auto mb-4" />
+            <h3>Welcome</h3>
+            <p>환영합니다. 로그인을 해주세요.</p>
             <InputField
                 id="email"
                 type="email"

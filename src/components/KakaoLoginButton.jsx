@@ -45,7 +45,7 @@ export default function KakaoLoginButton({onSuccess, onFailure}) {
     })
   }
   return(
-    <button className='bg-yellow-300 ' onClick={handleLogin}>
+    <button className='bg-yellow-200 text-center ' onClick={handleLogin}>
       <img src="/img/kakao-talk.png" alt="카카오톡 로고" />카카오로 시작하기
     </button>
   );
