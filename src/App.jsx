@@ -8,14 +8,22 @@ function App() {
       <Route
         path="/"
         element={
-          <div>
-            <Link to="/signup">회원가입 페이지</Link>
-            <Link to="/signin">로그인 페이지</Link>
+          <div className='min-h-screen flex justify-center items-center flex-col'>
+            <div>
+              <Link to="/signup">회원가입 페이지</Link>
+            </div>
+            <div>
+              <Link to="/signin">로그인 페이지</Link>
+            </div>
+            <div>
+              <Link to="/home">홈스크린 페이지 이동</Link>
+            </div>          
           </div>
         }
       />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="/home" element={<Home />} />
     </Routes>
   )
 }
