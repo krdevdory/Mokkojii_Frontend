@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.svg-orange-filter {
+    filter: invert(48%) sepia(78%) saturate(2074%) hue-rotate(345deg) brightness(102%) contrast(101%);
+}

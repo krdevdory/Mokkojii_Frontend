@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function KakaoLoginButton({onSuccess, onFailure}) {
-    const [ready, setReady] = useState(false); // 
+    const [ready, setReady] = useState(false);
     const kakaoKey = import.meta.env.VITE_KAKAO_KEY;
 
     useEffect(() => {
