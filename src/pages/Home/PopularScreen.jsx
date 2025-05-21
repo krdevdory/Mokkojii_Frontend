@@ -12,12 +12,12 @@ export default function PopularScreen() {
 
     return (
         <div className="flex  w-full h-screen">
-            {/* <PopularList></PopularList> */}
+            <PopularList></PopularList>
             <div className=" relative w-full h-full">
                 <div className='w-full h-full bg-blue-100'>
                     <KakaoMap />
                 </div>
-                <div className=" absolute pb-[48px] top-[52px] left-[522px] z-10">
+                <div className=" absolute pb-[48px] top-[52px] z-10">
                     <PopularFilterOption selectedTags={selectedTags} setSelectedTags={setSelectedTags}></PopularFilterOption>
                 </div>
             </div>
