@@ -5,7 +5,9 @@ import SearchHome from '../../components/search_home';
 import CardHome from '../../components/card_home';
 import KakaoMap from "../../components/map_home";
 import close from "../../assets/icons/chevron-left.svg";
-
+import PopularScreen from './PopularScreen';
+import CheerScreen from './CheerScreen';
+import ManageScreen from './ManageScreen';
 
 const HomeScreen = () => {
   // 상세 정보 표시 상태 관리
@@ -171,10 +173,6 @@ const HomeScreen = () => {
     </div>
   );
 };
-
-const PopularScreen = () => <div className="p-8"><h1 className="text-2xl font-bold">인기 화면</h1><p>인기 콘텐츠 내용입니다.</p></div>;
-const CheerScreen = () => <div className="p-8"><h1 className="text-2xl font-bold">응원 화면</h1><p>응원 게시판 내용입니다.</p></div>;
-const ManageScreen = () => <div className="p-8"><h1 className="text-2xl font-bold">가게 관리 화면</h1><p>가게 관리 내용입니다.</p></div>;
 
 function Home() {
   const [selected, setSelected] = useState("home");
