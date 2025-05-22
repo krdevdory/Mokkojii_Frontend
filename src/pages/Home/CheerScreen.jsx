@@ -108,102 +108,150 @@ export default function CheerScreen() {
                     </button>
                 </div>
 
+                <div className="grid grid-cols-3 gap-[16px] mt-[44px] mx-[24px]">
 
-                <div className="w-[386px] mt-[44px] mx-[24px] rounded-[16px] border border-[#C9C9C9] overflow-hidden">
-                    <div className="w-[386px] px-[24px] py-[30px] bg-white">
-                        <p className="text-[#121212] text-[16px] font-bold">모꼬지 21</p>
-                        <div className="flex text-[#999999] text-[16px] gap-[8px]">
-                            <p className="font-medium">2025.05.16</p>
-                            <p className="font-bold">5분 전</p>
-                        </div>
-
-                        <div className="w-full mt-[16px] p-[24px] bg-[#F1F1F1] rounded-[16px]">
-
-                            <div className="flex w-[290px] gap-[8px]">
-                                <div className="w-[92px] h-[84px] bg-white"></div>
-                                <div className="w-[92px] h-[84px] bg-white"></div>
-                                <div className="w-[92px] h-[84px] bg-white"></div>
+                    <div className="w-[386px] rounded-[16px] border border-[#C9C9C9] overflow-hidden">
+                        <div className="w-[386px] px-[24px] py-[30px] bg-white">
+                            <p className="text-[#121212] text-[16px] font-bold">모꼬지 21</p>
+                            <div className="flex text-[#999999] text-[16px] gap-[8px]">
+                                <p className="font-medium">2025.05.16</p>
+                                <p className="font-bold">5분 전</p>
                             </div>
 
-                            <p className="text-[24px] text-[#121212] font-semibold mt-[12px]">드뷔시 산장</p>
+                            <div className="w-full mt-[16px] p-[24px] bg-[#F1F1F1] rounded-[16px]">
 
-                            <p className="w-[290px] text-[20px] text-[#121212] font-medium line-clamp-3 overflow-hidden">여기 카페인데 진짜 분위기가 조용하고 무드있어요. 조용한 카페에서 잔잔한 음악들으며 힐링하고싶으신분 강추드려요</p>
+                                <div className="flex w-[290px] gap-[8px]">
+                                    <div className="w-[92px] h-[84px] bg-white"></div>
+                                    <div className="w-[92px] h-[84px] bg-white"></div>
+                                    <div className="w-[92px] h-[84px] bg-white"></div>
+                                </div>
 
-                            <div className="flex items-center h-[36px] mt-[12px] gap-[8px]">
-                                <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
-                                <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
-                                <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
-                            </div>
+                                <p className="text-[24px] text-[#121212] font-semibold mt-[12px]">드뷔시 산장</p>
 
-                            <div className="flex h-[36px] gap-[8px]">
-                                <button className="flex justify-center items-center gap-[2px] bg-[#FEECE1] border border-[#FC650D] text-[#FC650D] text-[16px] font-bold rounded-[8px] px-[8px]">
-                                    <img
-                                        src={thumbsup1}
-                                        alt="thumbsup1"
-                                        className={`w-[24px] h-[24px]`} />
-                                    <p>12개</p>
-                                </button>
+                                <p className="w-[290px] text-[20px] text-[#121212] font-medium line-clamp-3 overflow-hidden">여기 카페인데 진짜 분위기가 조용하고 무드있어요. 조용한 카페에서 잔잔한 음악들으며 힐링하고싶으신분 강추드려요</p>
 
-                                <button className="flex justify-center items-center gap-[2px] bg-white border border-[#C9C9C9] text-[#121212] text-[16px] font-bold rounded-[8px] px-[8px]">
-                                    <img
-                                        src={message}
-                                        alt="message"
-                                        className={`w-[24px] h-[24px]`} />
-                                    <p>8개</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                <div className="flex items-center h-[36px] mt-[12px] gap-[8px]">
+                                    <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
+                                    <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
+                                    <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
+                                </div>
 
+                                <div className="flex h-[36px] gap-[8px]">
+                                    <button className="flex justify-center items-center gap-[2px] bg-[#FEECE1] border border-[#FC650D] text-[#FC650D] text-[16px] font-bold rounded-[8px] px-[8px]">
+                                        <img
+                                            src={thumbsup1}
+                                            alt="thumbsup1"
+                                            className={`w-[24px] h-[24px]`} />
+                                        <p>12개</p>
+                                    </button>
 
-                <div className="w-[386px] mt-[44px] mx-[24px] rounded-[16px] border border-[#C9C9C9] overflow-hidden">
-                    <div className="w-[386px] px-[24px] py-[30px] bg-white">
-                        <p className="text-[#121212] text-[16px] font-bold">모꼬지 21</p>
-                        <div className="flex text-[#999999] text-[16px] gap-[8px]">
-                            <p className="font-medium">2025.05.16</p>
-                            <p className="font-bold">5분 전</p>
-                        </div>
-
-                        <div className="w-full mt-[16px] p-[24px] bg-[#F1F1F1] rounded-[16px]">
-
-                            <div className="flex w-[290px] gap-[8px]">
-                                <div className="w-[92px] h-[84px] bg-white"></div>
-                                <div className="w-[92px] h-[84px] bg-white"></div>
-                            </div>
-
-                            <p className="text-[24px] text-[#121212] font-semibold mt-[12px]">드뷔시 산장</p>
-
-                            <p className="w-[290px] text-[20px] text-[#121212] font-medium line-clamp-3 overflow-hidden">여기 카페인데 진짜 분위기가 조용하고 무드있어요. 조용한 카페에서 잔잔한 음악들으며 힐링하고싶으신분 강추드려요</p>
-
-                            <div className="flex items-center h-[36px] mt-[12px] gap-[8px]">
-                                <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
-                                <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
-                                <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
-                            </div>
-
-                            <div className="flex h-[36px] gap-[8px]">
-                                <button className="flex justify-center items-center gap-[2px] bg-white border border-[#C9C9C9] text-[#121212] text-[16px] font-bold rounded-[8px] px-[8px]">
-                                    <img
-                                        src={thumbsup2}
-                                        alt="thumbsup2"
-                                        className={`w-[24px] h-[24px]`} />
-                                    <p>12개</p>
-                                </button>
-
-                                <button className="flex justify-center items-center gap-[2px] bg-white border border-[#C9C9C9] text-[#121212] text-[16px] font-bold rounded-[8px] px-[8px]">
-                                    <img
-                                        src={message}
-                                        alt="message"
-                                        className={`w-[24px] h-[24px]`} />
-                                    <p>8개</p>
-                                </button>
+                                    <button className="flex justify-center items-center gap-[2px] bg-white border border-[#C9C9C9] text-[#121212] text-[16px] font-bold rounded-[8px] px-[8px]">
+                                        <img
+                                            src={message}
+                                            alt="message"
+                                            className={`w-[24px] h-[24px]`} />
+                                        <p>8개</p>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+
+                    <div className="w-[386px] rounded-[16px] border border-[#C9C9C9] overflow-hidden">
+                        <div className="w-[386px] px-[24px] py-[30px] bg-white">
+                            <p className="text-[#121212] text-[16px] font-bold">모꼬지 21</p>
+                            <div className="flex text-[#999999] text-[16px] gap-[8px]">
+                                <p className="font-medium">2025.05.16</p>
+                                <p className="font-bold">5분 전</p>
+                            </div>
+
+                            <div className="w-full mt-[16px] p-[24px] bg-[#F1F1F1] rounded-[16px]">
+
+                                <div className="flex w-[290px] gap-[8px]">
+                                    <div className="w-[92px] h-[84px] bg-white"></div>
+                                    <div className="w-[92px] h-[84px] bg-white"></div>
+                                </div>
+
+                                <p className="text-[24px] text-[#121212] font-semibold mt-[12px]">드뷔시 산장</p>
+
+                                <p className="w-[290px] text-[20px] text-[#121212] font-medium line-clamp-3 overflow-hidden">여기 카페인데 진짜 분위기가 조용하고 무드있어요. 조용한 카페에서 잔잔한 음악들으며 힐링하고싶으신분 강추드려요</p>
+
+                                <div className="flex items-center h-[36px] mt-[12px] gap-[8px]">
+                                    <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
+                                    <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
+                                    <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
+                                </div>
+
+                                <div className="flex h-[36px] gap-[8px]">
+                                    <button className="flex justify-center items-center gap-[2px] bg-white border border-[#C9C9C9] text-[#121212] text-[16px] font-bold rounded-[8px] px-[8px]">
+                                        <img
+                                            src={thumbsup2}
+                                            alt="thumbsup2"
+                                            className={`w-[24px] h-[24px]`} />
+                                        <p>12개</p>
+                                    </button>
+
+                                    <button className="flex justify-center items-center gap-[2px] bg-white border border-[#C9C9C9] text-[#121212] text-[16px] font-bold rounded-[8px] px-[8px]">
+                                        <img
+                                            src={message}
+                                            alt="message"
+                                            className={`w-[24px] h-[24px]`} />
+                                        <p>8개</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="w-[386px] rounded-[16px] border border-[#C9C9C9] overflow-hidden">
+                        <div className="w-[386px] px-[24px] py-[30px] bg-white">
+                            <p className="text-[#121212] text-[16px] font-bold">모꼬지 21</p>
+                            <div className="flex text-[#999999] text-[16px] gap-[8px]">
+                                <p className="font-medium">2025.05.16</p>
+                                <p className="font-bold">5분 전</p>
+                            </div>
+
+                            <div className="w-full mt-[16px] p-[24px] bg-[#F1F1F1] rounded-[16px]">
+
+                                <div className="flex w-[290px] gap-[8px]">
+                                    <div className="w-[92px] h-[84px] bg-white"></div>
+                                    <div className="w-[92px] h-[84px] bg-white"></div>
+                                </div>
+
+                                <p className="text-[24px] text-[#121212] font-semibold mt-[12px]">드뷔시 산장</p>
+
+                                <p className="w-[290px] text-[20px] text-[#121212] font-medium line-clamp-3 overflow-hidden">여기 카페인데 진짜 분위기가 조용하고 무드있어요. 조용한 카페에서 잔잔한 음악들으며 힐링하고싶으신분 강추드려요</p>
+
+                                <div className="flex items-center h-[36px] mt-[12px] gap-[8px]">
+                                    <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
+                                    <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
+                                    <p className="min-w-[57px] text-[#121212] text-[16px] font-medium"># 태그</p>
+                                </div>
+
+                                <div className="flex h-[36px] gap-[8px]">
+                                    <button className="flex justify-center items-center gap-[2px] bg-white border border-[#C9C9C9] text-[#121212] text-[16px] font-bold rounded-[8px] px-[8px]">
+                                        <img
+                                            src={thumbsup2}
+                                            alt="thumbsup2"
+                                            className={`w-[24px] h-[24px]`} />
+                                        <p>12개</p>
+                                    </button>
+
+                                    <button className="flex justify-center items-center gap-[2px] bg-white border border-[#C9C9C9] text-[#121212] text-[16px] font-bold rounded-[8px] px-[8px]">
+                                        <img
+                                            src={message}
+                                            alt="message"
+                                            className={`w-[24px] h-[24px]`} />
+                                        <p>8개</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-
-
 
 
             </div>
