@@ -21,7 +21,7 @@ const CardHome = ({ // 기본 더미 데이터
             <div className="mt-[12px]">
                 <div className="font-semibold text-[24px] text-[#121212]">{storeName}</div>
 
-                <p className="mt-[12px] text-[18px] font-medium line-clamp-2 overflow-hidden">
+                <p className="mt-[12px] text-[20px] font-medium line-clamp-2 overflow-hidden">
                     {description}
                 </p>
 
