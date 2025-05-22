@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const CardHome = ({ // 기본 더미 데이터
     image = "https://upload.wikimedia.org/wikipedia/commons/9/9c/Garak-guksu.jpg",
     storeName = "우동가조쿠",
@@ -10,6 +11,7 @@ const CardHome = ({ // 기본 더미 데이터
     return (
         <div className="w-[450px] mb-[48px] bg-white">
             {/* <div className="w-[450px] h-[419px] bg-white"> */}
+
             <img
                 className="w-[450px] h-[220px] object-cover rounded-[16px]"
                 src={image}
@@ -29,6 +31,7 @@ const CardHome = ({ // 기본 더미 데이터
                 </div>
 
 
+
                 {/* 태그 */}
                 <div className="flex flex-wrap gap-[8px] mt-[12px]">
                     {tags.map((tag, index) => (
@@ -38,7 +41,6 @@ const CardHome = ({ // 기본 더미 데이터
                         >
                             # {tag}
                         </span>
-
                     ))}
                 </div>
             </div>
