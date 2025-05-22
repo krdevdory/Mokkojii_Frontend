@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function KakaoLoginButton({onSuccess, onFailure}) {
-    const [ready, setReady] = useState(false); // 
+    const [ready, setReady] = useState(false);
     const kakaoKey = import.meta.env.VITE_KAKAO_KEY;
 
     useEffect(() => {
@@ -45,8 +45,10 @@ export default function KakaoLoginButton({onSuccess, onFailure}) {
     })
   }
   return(
-    <button className='bg-#FFEB3B text-center ' onClick={handleLogin}>
-      <img src="/img/kakao-talk.png" alt="카카오톡 로고" />카카오로 시작하기
+    <button className="rounded-[10px] w-full hover:bg-yellow-500 flex items-center justify-center gap-2 h-13 font-medium text-black" 
+    style={{backgroundColor : '#FFEB3B'}}
+    onClick={handleLogin}> 
+      <img src="/img/kakao-talk.png" alt="카카오톡 로고" />카카오 로그인
     </button>
   );
 }

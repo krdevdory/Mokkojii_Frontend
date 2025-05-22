@@ -1,18 +1,17 @@
 import React from 'react';
 
-const CardHome = ({
+
+const CardHome = ({ // 기본 더미 데이터
     image = "https://upload.wikimedia.org/wikipedia/commons/9/9c/Garak-guksu.jpg",
     storeName = "우동가조쿠",
     description = "쫄깃한 면발이 맛있는 우동집입니다. 붓카케우동부터 카레우동까지쫄깃한 면발이 맛있는 우동집입니다. 붓카케우동부터 카레우동까지",
     cheerCount = 128,
-    tags = ["칼국수", "한식", "맛집"],
-    onClick
+    tags = ["칼국수", "한식", "맛집"]
 }) => {
     return (
-        <div
-            className="w-[450px] mb-[48px] bg-white cursor-pointer hover:shadow-md transition-shadow"
-            onClick={onClick}
-        >
+        <div className="w-[450px] mb-[48px] bg-white">
+            {/* <div className="w-[450px] h-[419px] bg-white"> */}
+
             <img
                 className="w-[450px] h-[220px] object-cover rounded-[16px]"
                 src={image}
@@ -32,6 +31,8 @@ const CardHome = ({
                 </div>
 
 
+
+                {/* 태그 */}
                 <div className="flex flex-wrap gap-[8px] mt-[12px]">
                     {tags.map((tag, index) => (
                         <span
