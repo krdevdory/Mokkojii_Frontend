@@ -5,6 +5,7 @@ import SearchHome from '../../components/search_home';
 import CardHome from '../../components/card_home';
 import KakaoMap from "../../components/map_home";
 import close from "../../assets/icons/chevron-left.svg";
+import loading from "../../assets/loading.svg";
 import PopularScreen from './PopularScreen';
 import CheerScreen from './CheerScreen';
 import ManageScreen from './ManageScreen';
@@ -50,11 +51,10 @@ const HomeScreen = () => {
   };
 
   const [dummy, setDummy] = useState({
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Garak-guksu.jpg",
-    storeName: "우동가조쿠",
-    description: "쫄깃한 면발이 맛있는 우동집입니다. 붓카케우동부터 카레우동까지쫄깃한 면발이 맛있는 우동집입니다. 붓카케우동부터 카레우동까지",
-    cheerCount: 128,
-    tags: ["칼국수", "한식", "맛집"],
+    storeName: "모꼬지",
+    description: "데이터 로딩중",
+    cheerCount: 0,
+    tags: [],
   });
 
   return (
@@ -68,15 +68,16 @@ const HomeScreen = () => {
           {/* 실제 stores 데이터가 있으면 사용, 없으면 더미 데이터 사용 */}
           {stores.length > 0 ? (
             stores.map((store, index) => (
+              store.name.length > 0 &&
               <CardHome
                 key={index}
-                image={store.image || dummy.image}
+                image={`http://picsum.photos/id/${store.id}/450/220` || loading}
                 storeName={store.name || store.storeName}
                 description={store.description}
                 cheerCount={store.cheerCount || 0}
                 tags={store.tags || []}
                 onClick={() => handleCardClick({
-                  image: store.image || dummy.image,
+                  image: `http://picsum.photos/id/${store.id}/450/220` || loading,
                   storeName: store.name || store.storeName,
                   description: store.description,
                   cheerCount: store.cheerCount || 0,

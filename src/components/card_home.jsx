@@ -1,7 +1,7 @@
-import React from 'react';
+import loading from "../assets/loading.svg";
 
 const CardHome = ({
-    image = "https://upload.wikimedia.org/wikipedia/commons/9/9c/Garak-guksu.jpg",
+    image = loading,
     storeName = "우동가조쿠",
     description = "쫄깃한 면발이 맛있는 우동집입니다. 붓카케우동부터 카레우동까지쫄깃한 면발이 맛있는 우동집입니다. 붓카케우동부터 카레우동까지",
     cheerCount = 128,
