@@ -84,7 +84,7 @@ const KakaoMap = () => {
         // 지도 생성 - 중복 생성 방지
         if (!mapInstanceRef.current) {
             const options = {
-                center: new window.kakao.maps.LatLng(37.5665, 126.9780),
+                center: new window.kakao.maps.LatLng(37.560480, 127.038162),
                 level: 3
             };
 
@@ -93,7 +93,7 @@ const KakaoMap = () => {
 
             // 마커 추가
             const marker = new window.kakao.maps.Marker({
-                position: new window.kakao.maps.LatLng(37.5665, 126.9780)
+                position: new window.kakao.maps.LatLng(37.560480, 127.038162)
             });
             marker.setMap(mapInstanceRef.current);
 
