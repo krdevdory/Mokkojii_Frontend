@@ -34,7 +34,6 @@ export default function CheerScreen() {
 
                 setStores(result.data);
             } catch (err) {
-                console.log("씨발 : ", err);
             }
         }
     }, [sortBy, tag]);
