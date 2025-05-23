@@ -18,12 +18,15 @@ const SearchIcon = () => (
     </svg>
 );
 
-const SearchHome = () => {
+const SearchHome = ({ onSearch }) => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // 검색 로직 구현
+        // 부모 컴포넌트로 검색어 전달
+        if (onSearch) {
+            onSearch(searchQuery);
+        }
         console.log('검색어:', searchQuery);
     };
 
@@ -38,7 +41,7 @@ const SearchHome = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="찾고싶은 지역명을 검색하세요. ex) 마장동"
-                className="flex-1 outline-none text-[#121212] placeholder-[#999999] text-[18px]"
+                className="flex-1 outline-none text-[#121212] placeholder-[#999999] text-[18px] bg-transparent"
             />
         </form>
     );

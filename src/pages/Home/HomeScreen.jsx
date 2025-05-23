@@ -15,6 +15,7 @@ const HomeScreen = () => {
   const [showDetail, setShowDetail] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
   const [stores, setStores] = useState([]);
+  const [searchLocation, setSearchLocation] = useState(''); // 새로 추가
 
   useEffect(() => {
     const loadData = async () => {
@@ -37,7 +38,10 @@ const HomeScreen = () => {
   }, []);
 
 
-
+  const handleSearch = (searchQuery) => {
+    console.log('검색된 지역:', searchQuery);
+    setSearchLocation(searchQuery);
+  };
 
   // 카드 클릭 핸들러
   const handleCardClick = (cardData) => {
@@ -61,7 +65,7 @@ const HomeScreen = () => {
     <div className="flex w-full h-screen relative">
       <div className='w-[498px] flex-shrink-0'>
         <div className='flex justify-center w-full h-[136px] pt-[48px] bg-white'>
-          <SearchHome />
+          <SearchHome onSearch={handleSearch} />
         </div>
 
         <div className='flex flex-col items-center mt-[8px] overflow-y-auto h-[calc(100vh-144px)]'>
@@ -108,7 +112,7 @@ const HomeScreen = () => {
       </div>
 
       <div className='flex-1 bg-blue-100'>
-        <KakaoMap />
+        <KakaoMap searchLocation={searchLocation} />
       </div>
 
       {/* 상세 정보 오버레이 */}
@@ -150,11 +154,11 @@ const HomeScreen = () => {
                 <h3 className="mt-[24px] mb-[12px] ml-[24px] text-[24px] text-[#121212] font-semibold">응원 메시지 <span className='text-[#999999]'>{selectedCard.cheerCount}개</span></h3>
                 <div className='mt-[12px] mx-[24px] pl-[24px] bg-[#F1F1F1] border border-[#C9C9C9] rounded-[16px]'>
                   <p className='mt-[19.15px] text-[#6B6B6B] text-[16px] font-bold'>모꼬지 21</p>
-                  <p className='mt-[8px] mb-[16px] text-[16px] font-medium text-[#121212]'>dsadsadsadsa dsadsadsadsadsadsadsadsa dsadsadsadsadsadsadsadsadsadsadsadsa</p>
+                  <p className='mt-[8px] mb-[16px] text-[16px] font-medium text-[#121212]'>사장님 항상 맛있게 만들어 주셔서 항상 감사합니다.<br />번창하세요~</p>
                 </div>
                 <div className='mt-[12px] mx-[24px] pl-[24px] bg-[#F1F1F1] border border-[#C9C9C9] rounded-[16px]'>
-                  <p className='mt-[19.15px] text-[#6B6B6B] text-[16px] font-bold'>모꼬지 21</p>
-                  <p className='mt-[8px] mb-[16px] text-[16px] font-medium text-[#121212]'>dsadsadsadsa dsadsadsadsadsadsadsadsa dsadsadsadsadsadsadsadsadsadsadsadsa</p>
+                  <p className='mt-[19.15px] text-[#6B6B6B] text-[16px] font-bold'>모꼬지 12</p>
+                  <p className='mt-[8px] mb-[16px] text-[16px] font-medium text-[#121212]'>여기가 근방에 있는 맛집 중 제일 맛있음. 강추!!!</p>
                 </div>
 
                 <div className='flex justify-center items-center w-[151px] h-[44px] mt-[24px] mx-auto bg-white border border-[#C9C9C9] rounded-[8px] shadow-[0px_0px_9.5px_1px_rgba(0,0,0,0.2)]'>
@@ -164,10 +168,16 @@ const HomeScreen = () => {
 
               <div className="mt-[24px] border-t-[8px] border-[#F1F1F1]">
                 <h3 className="mt-[24px] ml-[24px] text-[24px] text-[#121212] font-semibold">가게 정보</h3>
-                <p className="mt-[24px] ml-[24px] text-gray-700">
-                  영업시간: 10:00 - 22:00<br />
-                  주소: 서울특별시 강남구 테헤란로 123<br />
-                  전화번호: 02-123-4567
+                <p className="mt-[24px] ml-[24px] text-gray-700 font-bold">
+                  <div className='flex gap-[10px] mt-[12px]'>
+                    <p>📍</p> 서울 성동구 왕십리로 215-1<br />
+                  </div>
+                  <div className='flex gap-[10px] mt-[12px]'>
+                    <p>⏰</p> 10:00 - 23:00<br />
+                  </div>
+                  <div className='flex gap-[10px] mt-[12px]'>
+                    <p>☎️</p> 0507-1406-2177
+                  </div>
                 </p>
               </div>
 
@@ -175,14 +185,34 @@ const HomeScreen = () => {
                 <h3 className="mt-[24px] mb-[24px] ml-[24px] text-[24px] text-[#121212] font-semibold">메뉴 <span className='text-[#999999]'>6개</span></h3>
 
                 <div className='grid grid-cols-2 gap-[12px] mx-[24px]'>
-                  {Array.from({ length: 4 }).map((_, index) => (
-                    <div key={index}>
-                      <div className='w-[195px] h-[195px] bg-[#F1F1F1] rounded-[16px]'>
-                      </div>
-                      <p className='mt-[12px] text-[20px] text-[#121212] font-medium'>붓가케우동</p>
-                      <p className='mt-[4px] text-[20px] text-[#121212] font-bold'>7,500원</p>
+                  <div>
+                    <div className='w-[195px] h-[195px] bg-[#F1F1F1] rounded-[16px]'>
+                      <img src='https://static.wtable.co.kr/image/production/service/recipe/1675/0c6d386e-2ff4-4c23-8327-b2608d7cd418.jpg?size=800x800' className='w-full h-full rounded-[16px]' />
                     </div>
-                  ))}
+                    <p className='mt-[12px] text-[20px] text-[#121212] font-medium'>붓가케우동</p>
+                    <p className='mt-[4px] text-[20px] text-[#121212] font-bold'>7,500원</p>
+                  </div>
+                  <div>
+                    <div className='w-[195px] h-[195px] bg-[#F1F1F1] rounded-[16px]'>
+                      <img src='http://t1.daumcdn.net/brunch/service/user/flI9/image/2gxGErqMx9pSfTx4QLSm7RNZP-c.JPG' className='w-full h-full rounded-[16px]' />
+                    </div>
+                    <p className='mt-[12px] text-[20px] text-[#121212] font-medium'>가조쿠우동</p>
+                    <p className='mt-[4px] text-[20px] text-[#121212] font-bold'>8,000원</p>
+                  </div>
+                  <div>
+                    <div className='w-[195px] h-[195px] bg-[#F1F1F1] rounded-[16px]'>
+                      <img src='https://i.namu.wiki/i/EeYt3jpq0itfG4E8czWRvbnifkljIjorHctUnVNTPkM5urNRnpx77uyicgk0JKZBZb-aBJ-REnAM_J5D5xFSQrxyYUY41U2p_NfDvTJzIPcP_-WHPB3eBT3T_dccIADn39qlEA2gtTHDRtGd8lGjeQ.webp' className='w-full h-full rounded-[16px]' />
+                    </div>
+                    <p className='mt-[12px] text-[20px] text-[#121212] font-medium'>육육라면</p>
+                    <p className='mt-[4px] text-[20px] text-[#121212] font-bold'>9,000원</p>
+                  </div>
+                  <div>
+                    <div className='w-[195px] h-[195px] bg-[#F1F1F1] rounded-[16px]'>
+                      <img src='https://i.namu.wiki/i/zkK247vxy4MeKAcGB37o0T9BRgk9gOcIlFlt8CrXr8YFVxFovoZe_FasTKzvo99cbnhFRbazrK0JRm9M_hs6ROTUWDYN2YNOavQAi1npprHfnOGIKCI3I5v8RJBSgW-sTcUcJByZtfyylptid0MfcA.webp' className='w-full h-full rounded-[16px]' />
+                    </div>
+                    <p className='mt-[12px] text-[20px] text-[#121212] font-medium'>치즈육육라면</p>
+                    <p className='mt-[4px] text-[20px] text-[#121212] font-bold'>11,000원</p>
+                  </div>
                 </div>
 
                 <div className='flex justify-center items-center w-[151px] h-[44px] mt-[24px] mx-auto bg-white border border-[#C9C9C9] rounded-[8px] shadow-[0px_0px_9.5px_1px_rgba(0,0,0,0.2)]'>
