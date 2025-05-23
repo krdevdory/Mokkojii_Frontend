@@ -18,7 +18,7 @@ const SearchIcon = () => (
     </svg>
 );
 
-const SearchCheer = () => {
+const SearchCheer = ({ placeholderText = "찾고싶은 가게를 검색하세요." }) => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleSubmit = (e) => {
@@ -37,7 +37,7 @@ const SearchCheer = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="찾고싶은 가게를 검색하세요."
+                placeholder={placeholderText}
                 className="flex-1 outline-none text-[#121212] placeholder-[#999999] text-[18px]"
             />
         </form>

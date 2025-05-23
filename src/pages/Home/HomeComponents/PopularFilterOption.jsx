@@ -1,25 +1,29 @@
 import { useState } from "react";
 
-export default function PopularFilterOption({ selectedTags, setSelectedTags}) {
-    const FILTER_TAGS = ["핫플레이스", "신상맛집", "맛있어요", "친절해요", "분위기굿", "가성비짱", "품질인증"];
+export default function PopularFilterOption({ selectedTags, setSelectedTags, onChange, filterTags}) {
     // const [selectedTags, setSelectedTags] = useState([]);
     const [isExpanded, setIsExpanded] = useState(false);  // 버튼 상태(초기 닫힘)
     // 버튼 토클
     const toggleTag = (value) => {
         const isSelected = selectedTags.includes(value);
+        let newTags;
         if (isSelected) {
-            setSelectedTags(selectedTags.filter((v) => v !== value));
+            newTags = selectedTags.filter((v) => v !== value);
         } else {
-            if (selectedTags.length < 2) {
-                setSelectedTags([...selectedTags, value]);
-            }
+            if (selectedTags.length < 2){
+                newTags = [...selectedTags, value];
+            }else{
+                return;
+            }                
         }
+        setSelectedTags(newTags);
+        if (onChange) onChange(newTags);
     };
 
     return (
-        <div className="flex items-center h-[64px] bg-white rounded-r-[17px] shadow transition-all duration-300">
-            <div className={` flex items-center gap-2 overflow-hidden transition-all duration-300 ${isExpanded ? "mx-2 w-auto" : "w-0"}`}>
-                {FILTER_TAGS.map((tag) => (
+        <div className="flex items-center h-[64px] bg-white rounded-r-[17px] shadow ">
+            <div className={` flex items-center gap-2 overflow-hidden transition-all duration-500 ${isExpanded ? "mx-2 w-auto" : "w-0"}`}>
+                {filterTags.map((tag) => (
                     <button 
                         key={tag}
                         onClick={() => toggleTag(tag)}
