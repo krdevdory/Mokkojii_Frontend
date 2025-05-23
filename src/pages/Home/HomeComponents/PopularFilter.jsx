@@ -1,5 +1,4 @@
 export default function PopularFilter({ selectedTags = [], onRemoveTag }) {
-    console.log("selectedTags:", selectedTags);
 
     return (
         <div className=" flex w-[450px] h-[64px] items-center mx-auto border-orange-400 border-[2px] mt-[48px] rounded-[14px] bg-orange-100">
