@@ -1,5 +1,5 @@
 
-export default function PopularList({ children }) {
+export default function PopularList({ children, onClick }) {
     const cardList = [
         {
             image: "/img/image.svg",
@@ -42,8 +42,8 @@ export default function PopularList({ children }) {
             {children}
             <div className="flex-1 overflow-y-auto ">
                 {cardList.map((card, idx) => (
-                    <div key={idx} className="w-[450px] mb-[48px] bg-white mx-auto mt-[15px]">
-                        <div className="mt-[12px] ">
+                    <div key={idx} className="w-[450px] mb-[48px] bg-white mx-auto mt-[15px]" >
+                        <div className="mt-[12px] "onClick={() => onClick(card) }>
                             <div className="flex justify-between">
                                 <div>
                                     <p className="text-[24px] font-semibold text-[#FC650D]">{idx + 1}</p>
